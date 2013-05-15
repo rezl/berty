@@ -37,9 +37,9 @@ int main(int argc, char **argv){
 	while(1){
 		read(fd, &ev, sizeof(struct input_event));
 		if(ev.type==1){
-			// do_something is here because we ignore key releases
-			// 1 corresponds to the key being pressed, 2 for held
-			//int do_something = (ev.value==1 || ev.value==2);
+			// 0 is being released
+			// 1 corresponds to the key being pressed
+			// 2 is held
 			if(ev.value == 1 || ev.value== 0){
 				switch(ev.code){
 					case 17:
