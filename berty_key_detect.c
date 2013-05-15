@@ -45,12 +45,7 @@ int main(int argc, char **argv){
 					case 17:
 						show_char("LEFT ARM");
 						// PUNCH
-						if(ev.value == 1){
-							system("sendevent /dev/input/event0 3 57 78; sendevent /dev/input/event0 3 53 435; sendevent /dev/input/event0 3 54 2111; sendevent /dev/input/event0 0 0 0");
-						}
-						else{
-							system("sendevent /dev/input/event0 3 57 4294967295; sendevent /dev/input/event0 0 0 0");
-						}
+						send_event(4,80);
 						break;
 					case 30:
 						show_char("RIGHT ARM");
